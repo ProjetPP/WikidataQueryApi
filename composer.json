@@ -1,0 +1,26 @@
+{
+	"name": "ppp/wikidataquery-api",
+	"type": "library",
+	"description": "A lib to interact with the WikidataQuery API",
+	"keywords": [
+		"wikidata",
+		"wikidataquery"
+	],
+	"homepage": "https://github.com/ProjetPP/WikidataQueryApi",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Thomas Pellissier Tanon",
+			"homepage": "https://github.com/Tpt"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"serialization/serialization": "3.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"WikidataQueryApi\\": "src/"
+		}
+	}
+}
