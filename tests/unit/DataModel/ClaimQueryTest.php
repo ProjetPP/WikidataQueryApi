@@ -1,15 +1,14 @@
 <?php
 
-namespace PPP\DataModel;
+namespace WikidataQueryApi\DataModel;
 
 use Wikibase\DataModel\Entity\ItemId;
 use Wikibase\DataModel\Entity\PropertyId;
-use WikidataQueryApi\DataModel\ClaimQuery;
 
 /**
- * @covers PPP\DataModel\Serializers\ClaimQuerySerializer
+ * @covers WikidataQueryApi\DataModel\ClaimQuery
  *
- * @licence MIT
+ * @licence GPLv2+
  * @author Thomas Pellissier Tanon
  */
 class ClaimQueryTest extends \PHPUnit_Framework_TestCase {

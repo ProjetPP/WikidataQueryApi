@@ -6,7 +6,7 @@ use Serializers\DispatchableSerializer;
 use Serializers\Serializer;
 
 /**
- * @licence MIT
+ * @licence GPLv2+
  * @author Thomas Pellissier Tanon
  */
 abstract class SerializerBaseTest extends \PHPUnit_Framework_TestCase {

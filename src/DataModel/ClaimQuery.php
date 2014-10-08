@@ -8,7 +8,7 @@ use Wikibase\DataModel\Entity\PropertyId;
 /**
  * Base class for all nodes.
  *
- * @licence MIT
+ * @licence GPLv2+
  * @author Thomas Pellissier Tanon
  */
 class ClaimQuery extends AbstractQuery {

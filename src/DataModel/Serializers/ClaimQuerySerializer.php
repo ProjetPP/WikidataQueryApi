@@ -7,7 +7,7 @@ use Serializers\Exceptions\UnsupportedObjectException;
 use WikidataQueryApi\DataModel\ClaimQuery;
 
 /**
- * @licence MIT
+ * @licence GPLv2+
  * @author Thomas Pellissier Tanon
  */
 class ClaimQuerySerializer implements DispatchableSerializer {

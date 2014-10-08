@@ -9,7 +9,7 @@ use WikidataQueryApi\DataModel\ClaimQuery;
 /**
  * @covers WikidataQueryApi\DataModel\Serializers\ClaimQuerySerializer
  *
- * @licence MIT
+ * @licence GPLv2+
  * @author Thomas Pellissier Tanon
  */
 class ClaimQuerySerializerTest extends SerializerBaseTest {

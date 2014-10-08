@@ -5,7 +5,7 @@ namespace WikidataQueryApi\DataModel;
 /**
  * Base class for all queries.
  *
- * @licence MIT
+ * @licence GPLv2+
  * @author Thomas Pellissier Tanon
  */
 abstract class AbstractQuery {
