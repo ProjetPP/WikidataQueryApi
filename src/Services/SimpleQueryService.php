@@ -3,6 +3,9 @@
 namespace WikidataQueryApi\Services;
 
 use Serializers\Serializer;
+use Wikibase\DataModel\Entity\ItemId;
+use WikidataQueryApi\DataModel\AbstractQuery;
+use WikidataQueryApi\WikibaseQueryApiException;
 use WikidataQueryApi\WikidataQueryApi;
 
 /**
@@ -27,10 +30,32 @@ class SimpleQueryService {
 	 * @param WikidataQueryApi $api
 	 * @param Serializer $querySerializer
 	 */
-	public function __construct (WikidataQueryApi $api, Serializer $querySerializer ) {
+	public function __construct( WikidataQueryApi $api, Serializer $querySerializer ) {
 		$this->api = $api;
 		$this->querySerializer = $querySerializer;
 	}
 
+	/**
+	 * @param AbstractQuery $query
+	 * @return ItemId[]
+	 *
+	 * @throws WikibaseQueryApiException
+	 */
+	public function doQuery( AbstractQuery $query ) {
+		$result = $this->api->doQuery( array(
+			'q' => $this->querySerializer->serialize( $query )
+		) );
 
+		return $this->parseItemList( $result['items'] );
+	}
+
+	private function parseItemList( array $itemNumericIds ) {
+		$list = array();
+
+		foreach ( $itemNumericIds as $itemNumericId ) {
+			$list[] = new ItemId( 'Q' . $itemNumericId );
+		}
+
+		return $list;
+	}
 }

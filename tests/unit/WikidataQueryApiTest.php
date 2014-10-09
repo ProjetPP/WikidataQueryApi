@@ -3,6 +3,8 @@
 namespace WikidataQueryApi;
 
 /**
+ * @covers WikidataQueryApi\WikidataQueryApi
+ *
  * @licence GPLv2+
  * @author Thomas Pellissier Tanon
  */
