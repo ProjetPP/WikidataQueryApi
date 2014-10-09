@@ -19,7 +19,7 @@ class WikidataQueryApi {
 	/**
 	 * @param string|WikidataQueryApiClient $client either the url or the api or a custom Client
 	 */
-	public function __construct( $client, $session = null ) {
+	public function __construct( $client ) {
 		if ( is_string( $client ) ) {
 			$client = WikidataQueryApiClient::factory( array( 'base_url' => $client ) );
 		}
