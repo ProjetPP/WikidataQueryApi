@@ -1,4 +1,4 @@
-# PPP DataModel
+# WikidataQueryApi
 
 [![Build Status](https://scrutinizer-ci.com/g/ProjetPP/WikidataQueryApi/badges/build.png?b=master)](https://scrutinizer-ci.com/g/ProjetPP/WikidataQueryApi/build-status/master)
 [![Code Coverage](https://scrutinizer-ci.com/g/ProjetPP/WikidataQueryApi/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/ProjetPP/WikidataQueryApi/?branch=master)
@@ -8,6 +8,9 @@ On [Packagist](https://packagist.org/packages/ppp/wikidataquery-api):
 [![Latest Stable Version](https://poser.pugx.org/ppp/wikidataquery-api/version.png)](https://packagist.org/packages/ppp/wikidataquery-api)
 [![Download count](https://poser.pugx.org/ppp/wikidataquery-api/d/total.png)](https://packagist.org/packages/ppp/wikidataquery-api)
 
+
+WikidataQueryApi is a small wrapper for the [WikidataQuery](https://wdq.wmflabs.org) tool. It only supports a subset of
+the [query syntax](https://wdq.wmflabs.org/api_documentation.html).
 
 ## Installation
 
