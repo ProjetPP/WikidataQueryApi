@@ -2,8 +2,7 @@
 
 namespace WikidataQueryApi\DataModel\Serializers;
 
-use DataValues\Geo\Values\GlobeCoordinateValue;
-use DataValues\Geo\Values\LatLongValue;
+use DataValues\LatLongValue;
 use Wikibase\DataModel\Entity\PropertyId;
 use WikidataQueryApi\DataModel\AroundQuery;
 
@@ -36,7 +35,7 @@ class AroundQuerySerializerTest extends SerializerBaseTest {
 				array()
 			),
 			array(
-				new GlobeCoordinateValue( new LatLongValue( 42, 42 ), 1 )
+				new LatLongValue( 42, 42 )
 			),
 		);
 	}
