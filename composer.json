@@ -20,6 +20,7 @@
 		"wikibase/data-model": ">0.8",
 		"data-values/geo": ">0.1",
 		"data-values/time": "~0.6",
+		"data-values/number": "~0.4",
 		"guzzle/http": "~3.7"
 	},
 	"autoload": {
