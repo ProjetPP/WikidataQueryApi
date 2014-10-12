@@ -36,4 +36,17 @@ Here is a small usage example:
 ```php
 // Load everything
 require_once( __DIR__ . "/vendor/autoload.php" );
+
+// Initialise HTTP connection
+$api = new \WikidataQueryApi\WikidataQueryApi( 'https://wdq.wmflabs.org/api' );
+
+// Build helper tools
+$wikidataQueryFactory = new  \WikidataQueryApi\WikidataQueryFactory( $api );
+$simpleQueryService = $wikidataQueryFactory->newSimpleQueryService());
+
+//Do a query that returns a list of ItemId
+//This query finds all the children (P40) of Charlemagne (Q3044)
+$itemIds = $simpleQueryService->doQuery(
+	new ClaimQuery(new PropertyId('P17'), new ItemId('Q3044'));
+);
 ```
