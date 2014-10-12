@@ -28,8 +28,8 @@ class BetweenQuery extends AbstractQuery {
 
 	/**
 	 * @param PropertyId $propertyId
-	 * @param TimeValue $beginValue
-	 * @param TimeValue $endValue
+	 * @param TimeValue|null $beginValue
+	 * @param TimeValue|null $endValue
 	 */
 	public function __construct( PropertyId $propertyId, TimeValue $beginValue = null, TimeValue $endValue = null ) {
 		$this->propertyId = $propertyId;
@@ -45,14 +45,14 @@ class BetweenQuery extends AbstractQuery {
 	}
 
 	/**
-	 * @return TimeValue
+	 * @return TimeValue|null
 	 */
 	public function getBeginValue() {
 		return $this->beginValue;
 	}
 
 	/**
-	 * @return TimeValue
+	 * @return TimeValue|null
 	 */
 	public function getEndValue() {
 		return $this->endValue;
