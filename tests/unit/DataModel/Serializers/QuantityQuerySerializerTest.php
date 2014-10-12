@@ -46,11 +46,11 @@ class QuantityQuerySerializerTest extends SerializerBaseTest {
 	public function serializationProvider() {
 		return array(
 			array(
-				'quantity[42,41,43]',
+				'quantity[42,+41,+43]',
 				$query = new QuantityQuery( new PropertyId( 'P42' ), new DecimalValue( '+41' ), new DecimalValue( '+43' ) )
 			),
 			array(
-				'quantity[42,42]',
+				'quantity[42,+42]',
 				$query = new QuantityQuery( new PropertyId( 'P42' ), new DecimalValue( '+42' ) )
 			),
 		);

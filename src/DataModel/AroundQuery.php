@@ -2,7 +2,6 @@
 
 namespace WikidataQueryApi\DataModel;
 
-use DataValues\Geo\Values\GlobeCoordinateValue;
 use DataValues\Geo\Values\LatLongValue;
 use Wikibase\DataModel\Entity\PropertyId;
 
