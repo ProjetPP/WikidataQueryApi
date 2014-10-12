@@ -4,6 +4,7 @@ namespace WikidataQueryApi;
 
 use Serializers\DispatchingSerializer;
 use WikidataQueryApi\DataModel\Serializers\ClaimQuerySerializer;
+use WikidataQueryApi\DataModel\Serializers\StringQuerySerializer;
 use WikidataQueryApi\Services\SimpleQueryService;
 
 /**
@@ -33,7 +34,8 @@ class WikidataQueryFactory {
 
 	private function newQuerySerializer() {
 		return new DispatchingSerializer( array(
-			new ClaimQuerySerializer()
+			new ClaimQuerySerializer(),
+			new StringQuerySerializer()
 		) );
 	}
 }
