@@ -50,12 +50,12 @@ class SimpleQueryService {
 	}
 
 	private function parseItemList( array $itemNumericIds ) {
-		$list = array();
+		$itemIds = array();
 
 		foreach ( $itemNumericIds as $itemNumericId ) {
-			$list[] = new ItemId( 'Q' . $itemNumericId );
+			$itemIds[] = ItemId::newFromNumber( $itemNumericId );
 		}
 
-		return $list;
+		return $itemIds;
 	}
 }
