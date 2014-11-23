@@ -7,7 +7,7 @@ use Wikibase\DataModel\Entity\PropertyId;
 use WikidataQueryApi\Query\AroundQuery;
 
 /**
- * @covers WikidataQueryApi\DataModel\Serializers\AroundQuerySerializer
+ * @covers WikidataQueryApi\Query\Serializers\AroundQuerySerializer
  *
  * @licence GPLv2+
  * @author Thomas Pellissier Tanon

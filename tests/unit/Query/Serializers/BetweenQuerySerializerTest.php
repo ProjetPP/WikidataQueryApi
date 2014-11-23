@@ -8,7 +8,7 @@ use Wikibase\DataModel\Entity\PropertyId;
 use WikidataQueryApi\Query\BetweenQuery;
 
 /**
- * @covers WikidataQueryApi\DataModel\Serializers\BetweenQuerySerializer
+ * @covers WikidataQueryApi\Query\Serializers\BetweenQuerySerializer
  *
  * @licence GPLv2+
  * @author Thomas Pellissier Tanon

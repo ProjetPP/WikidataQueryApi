@@ -6,7 +6,7 @@ use DataValues\DecimalValue;
 use Wikibase\DataModel\Entity\PropertyId;
 
 /**
- * @covers WikidataQueryApi\DataModel\QuantityQuery
+ * @covers WikidataQueryApi\Query\QuantityQuery
  *
  * @licence GPLv2+
  * @author Thomas Pellissier Tanon

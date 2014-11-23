@@ -6,7 +6,7 @@ use DataValues\StringValue;
 use Wikibase\DataModel\Entity\PropertyId;
 
 /**
- * @covers WikidataQueryApi\DataModel\StringQuery
+ * @covers WikidataQueryApi\Query\StringQuery
  *
  * @licence GPLv2+
  * @author Thomas Pellissier Tanon

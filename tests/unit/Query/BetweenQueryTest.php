@@ -7,7 +7,7 @@ use DataValues\TimeValue;
 use Wikibase\DataModel\Entity\PropertyId;
 
 /**
- * @covers WikidataQueryApi\DataModel\BetweenQuery
+ * @covers WikidataQueryApi\Query\BetweenQuery
  *
  * @licence GPLv2+
  * @author Thomas Pellissier Tanon

@@ -7,7 +7,7 @@ use Wikibase\DataModel\Entity\PropertyId;
 use WikidataQueryApi\Query\StringQuery;
 
 /**
- * @covers WikidataQueryApi\DataModel\Serializers\StringQuerySerializer
+ * @covers WikidataQueryApi\Query\Serializers\StringQuerySerializer
  *
  * @licence GPLv2+
  * @author Thomas Pellissier Tanon

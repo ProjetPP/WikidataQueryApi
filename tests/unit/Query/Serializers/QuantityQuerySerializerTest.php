@@ -7,7 +7,7 @@ use Wikibase\DataModel\Entity\PropertyId;
 use WikidataQueryApi\Query\QuantityQuery;
 
 /**
- * @covers WikidataQueryApi\DataModel\Serializers\QuantityQuerySerializer
+ * @covers WikidataQueryApi\Query\Serializers\QuantityQuerySerializer
  *
  * @licence GPLv2+
  * @author Thomas Pellissier Tanon

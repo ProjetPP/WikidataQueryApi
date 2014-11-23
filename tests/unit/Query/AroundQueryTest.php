@@ -6,7 +6,7 @@ use DataValues\LatLongValue;
 use Wikibase\DataModel\Entity\PropertyId;
 
 /**
- * @covers WikidataQueryApi\DataModel\AroundQuery
+ * @covers WikidataQueryApi\Query\AroundQuery
  *
  * @licence GPLv2+
  * @author Thomas Pellissier Tanon

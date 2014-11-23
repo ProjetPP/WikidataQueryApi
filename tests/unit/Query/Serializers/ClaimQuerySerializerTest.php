@@ -7,7 +7,7 @@ use Wikibase\DataModel\Entity\PropertyId;
 use WikidataQueryApi\Query\ClaimQuery;
 
 /**
- * @covers WikidataQueryApi\DataModel\Serializers\ClaimQuerySerializer
+ * @covers WikidataQueryApi\Query\Serializers\ClaimQuerySerializer
  *
  * @licence GPLv2+
  * @author Thomas Pellissier Tanon

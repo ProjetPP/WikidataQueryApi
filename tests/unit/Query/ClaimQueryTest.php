@@ -6,7 +6,7 @@ use Wikibase\DataModel\Entity\ItemId;
 use Wikibase\DataModel\Entity\PropertyId;
 
 /**
- * @covers WikidataQueryApi\DataModel\ClaimQuery
+ * @covers WikidataQueryApi\Query\ClaimQuery
  *
  * @licence GPLv2+
  * @author Thomas Pellissier Tanon
