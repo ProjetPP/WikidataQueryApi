@@ -4,7 +4,7 @@ namespace WikidataQueryApi\Services;
 
 use Serializers\Serializer;
 use Wikibase\DataModel\Entity\ItemId;
-use WikidataQueryApi\DataModel\AbstractQuery;
+use WikidataQueryApi\Query\AbstractQuery;
 use WikidataQueryApi\WikibaseQueryApiException;
 use WikidataQueryApi\WikidataQueryApi;
 

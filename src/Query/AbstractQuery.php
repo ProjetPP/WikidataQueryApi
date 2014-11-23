@@ -1,6 +1,6 @@
 <?php
 
-namespace WikidataQueryApi\DataModel;
+namespace WikidataQueryApi\Query;
 
 /**
  * Base class for all queries.

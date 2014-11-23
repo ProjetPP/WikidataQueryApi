@@ -3,8 +3,8 @@
 namespace WikidataQueryApi\Services;
 use Wikibase\DataModel\Entity\ItemId;
 use Wikibase\DataModel\Entity\PropertyId;
-use WikidataQueryApi\DataModel\ClaimQuery;
-use WikidataQueryApi\DataModel\Serializers\ClaimQuerySerializer;
+use WikidataQueryApi\Query\ClaimQuery;
+use WikidataQueryApi\Query\Serializers\ClaimQuerySerializer;
 
 /**
  * @covers WikidataQueryApi\Services\SimpleQueryService

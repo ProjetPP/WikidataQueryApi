@@ -1,6 +1,6 @@
 <?php
 
-namespace WikidataQueryApi\DataModel;
+namespace WikidataQueryApi\Query;
 
 use DataValues\BetweenValue;
 use DataValues\TimeValue;

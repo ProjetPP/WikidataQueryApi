@@ -1,6 +1,6 @@
 <?php
 
-namespace WikidataQueryApi\DataModel;
+namespace WikidataQueryApi\Query;
 
 use Wikibase\DataModel\Entity\ItemId;
 use Wikibase\DataModel\Entity\PropertyId;

@@ -1,10 +1,10 @@
 <?php
 
-namespace WikidataQueryApi\DataModel\Serializers;
+namespace WikidataQueryApi\Query\Serializers;
 
 use DataValues\DecimalValue;
 use Wikibase\DataModel\Entity\PropertyId;
-use WikidataQueryApi\DataModel\QuantityQuery;
+use WikidataQueryApi\Query\QuantityQuery;
 
 /**
  * @covers WikidataQueryApi\DataModel\Serializers\QuantityQuerySerializer

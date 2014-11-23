@@ -1,10 +1,10 @@
 <?php
 
-namespace WikidataQueryApi\DataModel\Serializers;
+namespace WikidataQueryApi\Query\Serializers;
 
 use Serializers\DispatchableSerializer;
 use Serializers\Exceptions\UnsupportedObjectException;
-use WikidataQueryApi\DataModel\ClaimQuery;
+use WikidataQueryApi\Query\ClaimQuery;
 
 /**
  * @licence GPLv2+

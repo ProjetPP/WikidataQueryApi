@@ -1,10 +1,10 @@
 <?php
 
-namespace WikidataQueryApi\DataModel\Serializers;
+namespace WikidataQueryApi\Query\Serializers;
 
 use Wikibase\DataModel\Entity\ItemId;
 use Wikibase\DataModel\Entity\PropertyId;
-use WikidataQueryApi\DataModel\ClaimQuery;
+use WikidataQueryApi\Query\ClaimQuery;
 
 /**
  * @covers WikidataQueryApi\DataModel\Serializers\ClaimQuerySerializer

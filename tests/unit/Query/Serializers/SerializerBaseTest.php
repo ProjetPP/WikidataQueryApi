@@ -1,6 +1,6 @@
 <?php
 
-namespace WikidataQueryApi\DataModel\Serializers;
+namespace WikidataQueryApi\Query\Serializers;
 
 use Serializers\DispatchableSerializer;
 use Serializers\Serializer;

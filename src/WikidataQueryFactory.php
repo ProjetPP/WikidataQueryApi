@@ -3,10 +3,10 @@
 namespace WikidataQueryApi;
 
 use Serializers\DispatchingSerializer;
-use WikidataQueryApi\DataModel\Serializers\AroundQuerySerializer;
-use WikidataQueryApi\DataModel\Serializers\BetweenQuerySerializer;
-use WikidataQueryApi\DataModel\Serializers\ClaimQuerySerializer;
-use WikidataQueryApi\DataModel\Serializers\StringQuerySerializer;
+use WikidataQueryApi\Query\Serializers\AroundQuerySerializer;
+use WikidataQueryApi\Query\Serializers\BetweenQuerySerializer;
+use WikidataQueryApi\Query\Serializers\ClaimQuerySerializer;
+use WikidataQueryApi\Query\Serializers\StringQuerySerializer;
 use WikidataQueryApi\Services\SimpleQueryService;
 
 /**

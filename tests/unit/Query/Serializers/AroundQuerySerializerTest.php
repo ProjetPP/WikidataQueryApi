@@ -1,10 +1,10 @@
 <?php
 
-namespace WikidataQueryApi\DataModel\Serializers;
+namespace WikidataQueryApi\Query\Serializers;
 
 use DataValues\LatLongValue;
 use Wikibase\DataModel\Entity\PropertyId;
-use WikidataQueryApi\DataModel\AroundQuery;
+use WikidataQueryApi\Query\AroundQuery;
 
 /**
  * @covers WikidataQueryApi\DataModel\Serializers\AroundQuerySerializer

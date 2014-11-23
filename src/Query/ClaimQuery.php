@@ -1,15 +1,15 @@
 <?php
 
-namespace WikidataQueryApi\DataModel;
+namespace WikidataQueryApi\Query;
 
-use DataValues\StringValue;
+use Wikibase\DataModel\Entity\ItemId;
 use Wikibase\DataModel\Entity\PropertyId;
 
 /**
  * @licence GPLv2+
  * @author Thomas Pellissier Tanon
  */
-class StringQuery extends AbstractQuery {
+class ClaimQuery extends AbstractQuery {
 
 	/**
 	 * @var PropertyId
@@ -17,17 +17,17 @@ class StringQuery extends AbstractQuery {
 	private $propertyId;
 
 	/**
-	 * @var StringValue
+	 * @var ItemId|null
 	 */
-	private $stringValue;
+	private $itemId;
 
 	/**
 	 * @param PropertyId $propertyId
-	 * @param StringValue $stringValue
+	 * @param ItemId|null $itemId
 	 */
-	public function __construct( PropertyId $propertyId, StringValue $stringValue ) {
+	public function __construct( PropertyId $propertyId, ItemId $itemId = null ) {
 		$this->propertyId = $propertyId;
-		$this->stringValue = $stringValue;
+		$this->itemId = $itemId;
 	}
 
 	/**
@@ -38,16 +38,16 @@ class StringQuery extends AbstractQuery {
 	}
 
 	/**
-	 * @return StringValue
+	 * @return ItemId|null
 	 */
-	public function getStringValue() {
-		return $this->stringValue;
+	public function getItemId() {
+		return $this->itemId;
 	}
 
 	/**
 	 * @see AbstractQuery::getType
 	 */
 	public function getType() {
-		return 'string';
+		return 'claim';
 	}
 }

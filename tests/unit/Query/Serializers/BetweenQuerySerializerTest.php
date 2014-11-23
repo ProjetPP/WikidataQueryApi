@@ -1,11 +1,11 @@
 <?php
 
-namespace WikidataQueryApi\DataModel\Serializers;
+namespace WikidataQueryApi\Query\Serializers;
 
 use DataValues\BetweenValue;
 use DataValues\TimeValue;
 use Wikibase\DataModel\Entity\PropertyId;
-use WikidataQueryApi\DataModel\BetweenQuery;
+use WikidataQueryApi\Query\BetweenQuery;
 
 /**
  * @covers WikidataQueryApi\DataModel\Serializers\BetweenQuerySerializer

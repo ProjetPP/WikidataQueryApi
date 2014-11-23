@@ -20,11 +20,11 @@ Use one of the below methods:
 
     composer require "ppp/wikidataquery-api":dev-master"
 
-2 - Create a composer.json file that just defines a dependency on version 0.2 of this package, and run 'composer install' in the directory:
+2 - Create a composer.json file that just defines a dependency on version 1.0 of this package, and run 'composer install' in the directory:
 
     {
         "require": {
-            "ppp/wikidataquery-api"": "~0.2.0"
+            "ppp/wikidataquery-api"": "~1.0"
         }
     }
 
@@ -38,10 +38,10 @@ Here is a small usage example:
 require_once( __DIR__ . "/vendor/autoload.php" );
 
 // Initialise HTTP connection
-$api = new \WikidataQueryApi\WikidataQueryApi( 'https://wdq.wmflabs.org/api' );
+$api = new WikidataQueryApi( 'https://wdq.wmflabs.org/api' );
 
 // Build helper tools
-$wikidataQueryFactory = new  \WikidataQueryApi\WikidataQueryFactory( $api );
+$wikidataQueryFactory = new WikidataQueryFactory( $api );
 $simpleQueryService = $wikidataQueryFactory->newSimpleQueryService());
 
 //Do a query that returns a list of ItemId

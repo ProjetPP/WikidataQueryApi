@@ -10,5 +10,5 @@ if ( !is_readable( __DIR__ . '/../vendor/autoload.php' ) ) {
 
 $loader = require_once( __DIR__ . '/../vendor/autoload.php' );
 $loader->addClassMap( array(
-	'WikidataQueryApi\DataModel\Serializers\SerializerBaseTest' => __DIR__ . '/unit/DataModel/Serializers/SerializerBaseTest.php',
+	'WikidataQueryApi\Query\Serializers\SerializerBaseTest' => __DIR__ . '/unit/Query/Serializers/SerializerBaseTest.php',
 ) );

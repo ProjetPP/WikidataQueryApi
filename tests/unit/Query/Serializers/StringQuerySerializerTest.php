@@ -1,10 +1,10 @@
 <?php
 
-namespace WikidataQueryApi\DataModel\Serializers;
+namespace WikidataQueryApi\Query\Serializers;
 
 use DataValues\StringValue;
 use Wikibase\DataModel\Entity\PropertyId;
-use WikidataQueryApi\DataModel\StringQuery;
+use WikidataQueryApi\Query\StringQuery;
 
 /**
  * @covers WikidataQueryApi\DataModel\Serializers\StringQuerySerializer
