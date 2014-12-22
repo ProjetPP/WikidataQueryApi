@@ -6,6 +6,7 @@ use Serializers\DispatchingSerializer;
 use WikidataQueryApi\Query\Serializers\AroundQuerySerializer;
 use WikidataQueryApi\Query\Serializers\BetweenQuerySerializer;
 use WikidataQueryApi\Query\Serializers\ClaimQuerySerializer;
+use WikidataQueryApi\Query\Serializers\QuerySerializer;
 use WikidataQueryApi\Query\Serializers\StringQuerySerializer;
 use WikidataQueryApi\Services\SimpleQueryService;
 
@@ -35,11 +36,11 @@ class WikidataQueryFactory {
 	}
 
 	private function newQuerySerializer() {
-		return new DispatchingSerializer( array(
+		return new QuerySerializer( new DispatchingSerializer( array(
 			new ClaimQuerySerializer(),
 			new StringQuerySerializer(),
 			new AroundQuerySerializer(),
 			new BetweenQuerySerializer()
-		) );
+		) ) );
 	}
 }
