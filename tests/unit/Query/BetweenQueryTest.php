@@ -2,7 +2,6 @@
 
 namespace WikidataQueryApi\Query;
 
-use DataValues\BetweenValue;
 use DataValues\TimeValue;
 use Wikibase\DataModel\Entity\PropertyId;
 
