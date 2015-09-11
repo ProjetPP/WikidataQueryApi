@@ -3,7 +3,7 @@
 [![Build Status](https://scrutinizer-ci.com/g/ProjetPP/WikidataQueryApi/badges/build.png?b=master)](https://scrutinizer-ci.com/g/ProjetPP/WikidataQueryApi/build-status/master)
 [![Code Coverage](https://scrutinizer-ci.com/g/ProjetPP/WikidataQueryApi/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/ProjetPP/WikidataQueryApi/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ProjetPP/WikidataQueryApi/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ProjetPP/WikidataQueryApi/?branch=master)
-[![Dependency Status](https://www.versioneye.com/user/projects/5482b5fd3f594e77e9000006/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5482b5fd3f594e77e9000006)
+[![Dependency Status](https://www.versioneye.com/php/ppp:wikidataquery-api/dev-master/badge.svg)](https://www.versioneye.com/php/ppp:wikidataquery-api/dev-master)
 
 On [Packagist](https://packagist.org/packages/ppp/wikidataquery-api):
 [![Latest Stable Version](https://poser.pugx.org/ppp/wikidataquery-api/version.png)](https://packagist.org/packages/ppp/wikidataquery-api)
