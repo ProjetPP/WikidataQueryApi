@@ -24,21 +24,21 @@ class BetweenQuerySerializerTest extends SerializerBaseTest {
 			[
 				new BetweenQuery(
 					new PropertyId( 'P42' ),
-					new TimeValue( '+00000001952-03-11T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, '' ),
-					new TimeValue( '+00000001952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, '' )
+					new TimeValue( '+1952-03-11T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, 'foo' ),
+					new TimeValue( '+1952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, 'foo' )
 				)
 			],
 			[
 				new BetweenQuery(
 					new PropertyId( 'P42' ),
-					new TimeValue( '+00000001952-03-11T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, '' )
+					new TimeValue( '+1952-03-11T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, 'foo' )
 				)
 			],
 			[
 				new BetweenQuery(
 					new PropertyId( 'P42' ),
 					null,
-					new TimeValue( '+00000001952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, '' )
+					new TimeValue( '+1952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, 'foo' )
 				)
 			],
 		];
@@ -53,7 +53,7 @@ class BetweenQuerySerializerTest extends SerializerBaseTest {
 				[]
 			],
 			[
-				new TimeValue( '+00000001952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, '' )
+				new TimeValue( '+1952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, 'foo' )
 			],
 		];
 	}
@@ -61,26 +61,26 @@ class BetweenQuerySerializerTest extends SerializerBaseTest {
 	public function serializationProvider() {
 		return [
 			[
-				'between[42,+00000001952-03-11T00:00:00Z,+00000001952-03-12T00:00:00Z]',
+				'between[42,+1952-03-11T00:00:00Z,+1952-03-12T00:00:00Z]',
 				new BetweenQuery(
 					new PropertyId( 'P42' ),
-					new TimeValue( '+00000001952-03-11T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, '' ),
-					new TimeValue( '+00000001952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, '' )
+					new TimeValue( '+1952-03-11T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, 'foo' ),
+					new TimeValue( '+1952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, 'foo' )
 				)
 			],
 			[
-				'between[42,+00000001952-03-11T00:00:00Z]',
+				'between[42,+1952-03-11T00:00:00Z]',
 				new BetweenQuery(
 					new PropertyId( 'P42' ),
-					new TimeValue( '+00000001952-03-11T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, '' )
+					new TimeValue( '+1952-03-11T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, 'foo' )
 				)
 			],
 			[
-				'between[42,,+00000001952-03-12T00:00:00Z]',
+				'between[42,,+1952-03-12T00:00:00Z]',
 				new BetweenQuery(
 					new PropertyId( 'P42' ),
 					null,
-					new TimeValue( '+00000001952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, '' )
+					new TimeValue( '+1952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, 'foo' )
 				)
 			],
 		];

@@ -22,11 +22,11 @@ class BetweenQueryTest extends \PHPUnit_Framework_TestCase {
 	public function testGetBeginValue() {
 		$query = new BetweenQuery(
 			new PropertyId( 'P42' ),
-			new TimeValue( '+00000001952-03-11T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, '' ),
-			new TimeValue( '+00000001952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, '' )
+			new TimeValue( '+1952-03-11T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, 'foo' ),
+			new TimeValue( '+1952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, 'foo' )
 		);
 		$this->assertEquals(
-			new TimeValue( '+00000001952-03-11T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, '' ),
+			new TimeValue( '+1952-03-11T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, 'foo' ),
 			$query->getBeginValue()
 		);
 	}
@@ -35,11 +35,11 @@ class BetweenQueryTest extends \PHPUnit_Framework_TestCase {
 	public function testGetEndValue() {
 		$query = new BetweenQuery(
 			new PropertyId( 'P42' ),
-			new TimeValue( '+00000001952-03-11T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, '' ),
-			new TimeValue( '+00000001952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, '' )
+			new TimeValue( '+1952-03-11T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, 'foo' ),
+			new TimeValue( '+1952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, 'foo' )
 		);
 		$this->assertEquals(
-			new TimeValue( '+00000001952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, '' ),
+			new TimeValue( '+1952-03-12T00:00:00Z', 0, 0, 0, TimeValue::PRECISION_DAY, 'foo' ),
 			$query->getEndValue()
 		);
 	}
