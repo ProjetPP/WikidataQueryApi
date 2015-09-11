@@ -19,40 +19,40 @@ class ClaimQuerySerializerTest extends SerializerBaseTest {
 	}
 
 	public function serializableProvider() {
-		return array(
-			array(
+		return [
+			[
 				new ClaimQuery( new PropertyId( 'P42' ), new ItemId( 'Q42' ) )
-			),
-			array(
+			],
+			[
 				new ClaimQuery( new PropertyId( 'P42' ) )
-			),
-		);
+			],
+		];
 	}
 
 	public function nonSerializableProvider() {
-		return array(
-			array(
+		return [
+			[
 				5
-			),
-			array(
-				array()
-			),
-			array(
+			],
+			[
+				[]
+			],
+			[
 				new ItemId( 'Q42' )
-			),
-		);
+			],
+		];
 	}
 
 	public function serializationProvider() {
-		return array(
-			array(
+		return [
+			[
 				'claim[42:42]',
 				new ClaimQuery( new PropertyId( 'P42' ), new ItemId( 'Q42' ) )
-			),
-			array(
+			],
+			[
 				'claim[42]',
 				new ClaimQuery( new PropertyId( 'P42' ) )
-			),
-		);
+			],
+		];
 	}
 }

@@ -56,7 +56,7 @@ class QuerySerializer implements DispatchableSerializer {
 	}
 
 	private function serializeQueries( array $queries ) {
-		$serialized = array();
+		$serialized = [];
 
 		foreach( $queries as $query ) {
 			$serialized[] = $this->getSerialized( $query );

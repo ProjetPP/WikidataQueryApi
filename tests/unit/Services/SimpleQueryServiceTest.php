@@ -20,19 +20,19 @@ class SimpleQueryServiceTest extends \PHPUnit_Framework_TestCase {
 			->getMock();
 		$apiMock->expects( $this->any() )
 			->method( 'doQuery' )
-			->with( $this->equalTo( array(
+			->with( $this->equalTo( [
 				'q' => 'claim[42:42]'
-			) ) )
-			->will( $this->returnValue( array(
-				'status' => array( 'error' => 'OK' ),
-				'items' => array( 42 )
-			) ) );
+			] ) )
+			->will( $this->returnValue( [
+				'status' => [ 'error' => 'OK' ],
+				'items' => [ 42 ]
+			] ) );
 
 		$service = new SimpleQueryService( $apiMock, new ClaimQuerySerializer() );
 		$this->assertEquals(
-			array(
+			[
 				new ItemId( 'Q42' )
-			),
+			],
 			$service->doQuery(
 				new ClaimQuery( new PropertyId('P42'), new ItemId( 'Q42' ) )
 			)

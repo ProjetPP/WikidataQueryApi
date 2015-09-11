@@ -11,12 +11,12 @@ namespace WikidataQueryApi\Query;
 class AndQueryTest extends \PHPUnit_Framework_TestCase {
 
 	public function testGetSubQueries() {
-		$query = new AndQuery( array() );
-		$this->assertEquals( array(), $query->getSubQueries() );
+		$query = new AndQuery( [] );
+		$this->assertEquals( [], $query->getSubQueries() );
 	}
 
 	public function testGetType() {
-		$query = new AndQuery( array() );
+		$query = new AndQuery( [] );
 		$this->assertEquals( 'AND', $query->getType() );
 	}
 }

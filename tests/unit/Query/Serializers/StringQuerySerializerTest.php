@@ -19,33 +19,33 @@ class StringQuerySerializerTest extends SerializerBaseTest {
 	}
 
 	public function serializableProvider() {
-		return array(
-			array(
+		return [
+			[
 				new StringQuery( new PropertyId( 'P42' ), new StringValue( 'foo' ) )
-			),
-		);
+			],
+		];
 	}
 
 	public function nonSerializableProvider() {
-		return array(
-			array(
+		return [
+			[
 				5
-			),
-			array(
-				array()
-			),
-			array(
+			],
+			[
+				[]
+			],
+			[
 				new StringValue( 'foo' )
-			),
-		);
+			],
+		];
 	}
 
 	public function serializationProvider() {
-		return array(
-			array(
+		return [
+			[
 				'string[42:"foo"]',
 				new StringQuery( new PropertyId( 'P42' ), new StringValue( 'foo' ) )
-			),
-		);
+			],
+		];
 	}
 }

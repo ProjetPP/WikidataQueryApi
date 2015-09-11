@@ -42,15 +42,15 @@ class SimpleQueryService {
 	 * @throws WikibaseQueryApiException
 	 */
 	public function doQuery( AbstractQuery $query ) {
-		$result = $this->api->doQuery( array(
+		$result = $this->api->doQuery( [
 			'q' => $this->querySerializer->serialize( $query )
-		) );
+		] );
 
 		return $this->parseItemList( $result['items'] );
 	}
 
 	private function parseItemList( array $itemNumericIds ) {
-		$itemIds = array();
+		$itemIds = [];
 
 		foreach ( $itemNumericIds as $itemNumericId ) {
 			$itemIds[] = ItemId::newFromNumber( $itemNumericId );

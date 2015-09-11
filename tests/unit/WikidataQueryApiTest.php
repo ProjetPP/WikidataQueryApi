@@ -14,23 +14,23 @@ class WikidataQueryApiTest extends \PHPUnit_Framework_TestCase {
 		$clientMock = $this->getMock( 'WikidataQueryApi\Guzzle\WikidataQueryApiClient' );
 		$clientMock->expects( $this->any() )
 			->method( 'apiGet' )
-			->with( $this->equalTo( array(
+			->with( $this->equalTo( [
 				'q' => 'claim[42:42]'
-			) ) )
-			->will( $this->returnValue( array(
-				'status' => array( 'error' => 'OK' ),
-				'items' => array( 42 )
-			) ) );
+			] ) )
+			->will( $this->returnValue( [
+				'status' => [ 'error' => 'OK' ],
+				'items' => [ 42 ]
+			] ) );
 
 		$wikidataQueryApi = new WikidataQueryApi( $clientMock );
 		$this->assertEquals(
-			array(
-				'status' => array( 'error' => 'OK' ),
-				'items' => array( 42 )
-			),
-			$wikidataQueryApi->doQuery( array(
+			[
+				'status' => [ 'error' => 'OK' ],
+				'items' => [ 42 ]
+			],
+			$wikidataQueryApi->doQuery( [
 				'q' => 'claim[42:42]'
-			) )
+			] )
 		);
 	}
 
@@ -38,18 +38,18 @@ class WikidataQueryApiTest extends \PHPUnit_Framework_TestCase {
 		$clientMock = $this->getMock( 'WikidataQueryApi\Guzzle\WikidataQueryApiClient' );
 		$clientMock->expects( $this->any() )
 			->method( 'apiGet' )
-			->with( $this->equalTo( array(
+			->with( $this->equalTo( [
 				'q' => 'claim[42:42]'
-			) ) )
-			->will( $this->returnValue( array(
-				'status' => array( 'error' => 'Error' )
-			) ) );
+			] ) )
+			->will( $this->returnValue( [
+				'status' => [ 'error' => 'Error' ]
+			] ) );
 
 		$wikidataQueryApi = new WikidataQueryApi( $clientMock );
 
 		$this->setExpectedException( 'WikidataQueryApi\WikibaseQueryApiException' );
-		$wikidataQueryApi->doQuery( array(
+		$wikidataQueryApi->doQuery( [
 			'q' => 'claim[42:42]'
-		) );
+		] );
 	}
 }

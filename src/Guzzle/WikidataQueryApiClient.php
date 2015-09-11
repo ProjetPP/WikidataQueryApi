@@ -13,9 +13,9 @@ use Guzzle\Http\Client;
  */
 class WikidataQueryApiClient extends Client {
 
-	public static function factory( $config = array() ) {
-		$required = array( 'base_url' );
-		$config = Collection::fromConfig( $config, array(), $required );
+	public static function factory( $config = [] ) {
+		$required = [ 'base_url' ];
+		$config = Collection::fromConfig( $config, [], $required );
 
 		$client = new self( $config->get( 'base_url' ) );
 		$client->setConfig( $config );
@@ -32,8 +32,8 @@ class WikidataQueryApiClient extends Client {
 	 * @return array the API result
 	 */
 	public function apiGet( $params ) {
-		return $this->get( null, null, array(
+		return $this->get( null, null, [
 			'query' => $params
-		) )->send()->json();
+		] )->send()->json();
 	}
 }

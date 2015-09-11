@@ -20,40 +20,40 @@ class QuerySerializerTest extends SerializerBaseTest {
 	}
 
 	public function serializableProvider() {
-		return array(
-			array(
+		return [
+			[
 				new StringQuery( new PropertyId( 'P42' ), new StringValue( 'foo' ) )
-			),
-			array(
-				new AndQuery( array( new StringQuery( new PropertyId( 'P42' ), new StringValue( 'foo' ) ) ) )
-			),
-		);
+			],
+			[
+				new AndQuery( [ new StringQuery( new PropertyId( 'P42' ), new StringValue( 'foo' ) ) ] )
+			],
+		];
 	}
 
 	public function nonSerializableProvider() {
-		return array(
-			array(
+		return [
+			[
 				5
-			),
-			array(
-				array()
-			),
-		);
+			],
+			[
+				[]
+			],
+		];
 	}
 
 	public function serializationProvider() {
-		return array(
-			array(
+		return [
+			[
 				'string[42:"foo"]',
 				new StringQuery( new PropertyId( 'P42' ), new StringValue( 'foo' ) )
-			),
-			array(
+			],
+			[
 				'(string[42:"foo"] AND string[43:"bar"])',
-				new AndQuery(array(
+				new AndQuery([
 					new StringQuery( new PropertyId( 'P42' ), new StringValue( 'foo' ) ),
 					new StringQuery( new PropertyId( 'P43' ), new StringValue( 'bar' ) )
-				) )
-			),
-		);
+				] )
+			],
+		];
 	}
 }

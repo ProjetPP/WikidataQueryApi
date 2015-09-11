@@ -11,12 +11,12 @@ namespace WikidataQueryApi\Query;
 class OrQueryTest extends \PHPUnit_Framework_TestCase {
 
 	public function testGetSubQueries() {
-		$query = new OrQuery( array() );
-		$this->assertEquals( array(), $query->getSubQueries() );
+		$query = new OrQuery( [] );
+		$this->assertEquals( [], $query->getSubQueries() );
 	}
 
 	public function testGetType() {
-		$query = new OrQuery( array() );
+		$query = new OrQuery( [] );
 		$this->assertEquals( 'OR', $query->getType() );
 	}
 }

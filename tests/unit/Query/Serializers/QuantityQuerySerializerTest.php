@@ -19,40 +19,40 @@ class QuantityQuerySerializerTest extends SerializerBaseTest {
 	}
 
 	public function serializableProvider() {
-		return array(
-			array(
+		return [
+			[
 				new QuantityQuery( new PropertyId( 'P42' ), new DecimalValue( '+41' ), new DecimalValue( '+43' ) )
-			),
-			array(
+			],
+			[
 				new QuantityQuery( new PropertyId( 'P42' ), new DecimalValue( '+42' ) )
-			),
-		);
+			],
+		];
 	}
 
 	public function nonSerializableProvider() {
-		return array(
-			array(
+		return [
+			[
 				5
-			),
-			array(
-				array()
-			),
-			array(
+			],
+			[
+				[]
+			],
+			[
 				new DecimalValue( '+43' )
-			),
-		);
+			],
+		];
 	}
 
 	public function serializationProvider() {
-		return array(
-			array(
+		return [
+			[
 				'quantity[42,+41,+43]',
 				$query = new QuantityQuery( new PropertyId( 'P42' ), new DecimalValue( '+41' ), new DecimalValue( '+43' ) )
-			),
-			array(
+			],
+			[
 				'quantity[42,+42]',
 				$query = new QuantityQuery( new PropertyId( 'P42' ), new DecimalValue( '+42' ) )
-			),
-		);
+			],
+		];
 	}
 }

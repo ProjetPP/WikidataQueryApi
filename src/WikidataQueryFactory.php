@@ -36,11 +36,11 @@ class WikidataQueryFactory {
 	}
 
 	private function newQuerySerializer() {
-		return new QuerySerializer( new DispatchingSerializer( array(
+		return new QuerySerializer( new DispatchingSerializer( [
 			new ClaimQuerySerializer(),
 			new StringQuerySerializer(),
 			new AroundQuerySerializer(),
 			new BetweenQuerySerializer()
-		) ) );
+		] ) );
 	}
 }

@@ -21,7 +21,7 @@ class WikidataQueryApi {
 	 */
 	public function __construct( $client ) {
 		if ( is_string( $client ) ) {
-			$client = WikidataQueryApiClient::factory( array( 'base_url' => $client ) );
+			$client = WikidataQueryApiClient::factory( [ 'base_url' => $client ] );
 		}
 		if ( !( $client instanceof WikidataQueryApiClient ) ) {
 			throw new InvalidArgumentException();
