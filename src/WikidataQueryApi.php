@@ -2,8 +2,8 @@
 
 namespace WikidataQueryApi;
 
-use InvalidArgumentException;
-use WikidataQueryApi\Guzzle\WikidataQueryApiClient;
+use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
 
 /**
  * @licence GPLv2+
@@ -12,21 +12,25 @@ use WikidataQueryApi\Guzzle\WikidataQueryApiClient;
 class WikidataQueryApi {
 
 	/**
-	 * @var WikidataQueryApiClient
+	 * @var string
+	 */
+	private $apiUrl;
+
+	/**
+	 * @var ClientInterface
 	 */
 	private $client;
 
 	/**
-	 * @param string|WikidataQueryApiClient $client either the url or the api or a custom Client
+	 * @param string $apiUrl the URL of the Wikidata Query API
+	 * @param ClientInterface|null $client the Guzzle client to use
 	 */
-	public function __construct( $client ) {
-		if ( is_string( $client ) ) {
-			$client = WikidataQueryApiClient::factory( [ 'base_url' => $client ] );
-		}
-		if ( !( $client instanceof WikidataQueryApiClient ) ) {
-			throw new InvalidArgumentException();
+	public function __construct( $apiUrl, ClientInterface $client = null ) {
+		if( $client === null ) {
+			$client = new Client();
 		}
 
+		$this->apiUrl = $apiUrl;
 		$this->client = $client;
 	}
 
@@ -37,9 +41,12 @@ class WikidataQueryApi {
 	 * @throws WikibaseQueryApiException
 	 */
 	public function doQuery( $params ) {
-		$result = $this->client->apiGet( $params );
+		$result = json_decode( $this->client->get(
+			$this->apiUrl,
+			[ 'query' => $params ]
+		)->getBody(), true );
 
-		if ( $result['status']['error'] != 'OK' ) {
+		if ( $result['status']['error'] !== 'OK' ) {
 			throw new WikibaseQueryApiException( $result['status']['error'] );
 		}
 

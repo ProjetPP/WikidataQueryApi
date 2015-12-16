@@ -16,12 +16,12 @@
 	],
 	"require": {
 		"php": ">=5.5.0",
-		"serialization/serialization": "3.*",
+		"serialization/serialization": "~3.0",
 		"wikibase/data-model": "~4.0|~3.0|~2.0|~1.0|~0.8",
 		"data-values/geo": "~1.0|~0.1",
 		"data-values/time": "~0.6",
 		"data-values/number": "~0.4",
-		"guzzle/http": "~3.7"
+		"guzzlehttp/guzzle": "~6.1"
 	},
 	"autoload": {
 		"psr-4": {
