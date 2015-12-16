@@ -2,6 +2,11 @@
 
 namespace WikidataQueryApi;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\Handler\MockHandler;
+use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Psr7\Response;
+
 /**
  * @covers WikidataQueryApi\WikidataQueryApi
  *
@@ -11,18 +16,20 @@ namespace WikidataQueryApi;
 class WikidataQueryApiTest extends \PHPUnit_Framework_TestCase {
 
 	public function testDoQuery() {
-		$clientMock = $this->getMock( 'WikidataQueryApi\Guzzle\WikidataQueryApiClient' );
-		$clientMock->expects( $this->any() )
-			->method( 'apiGet' )
-			->with( $this->equalTo( [
-				'q' => 'claim[42:42]'
-			] ) )
-			->will( $this->returnValue( [
-				'status' => [ 'error' => 'OK' ],
-				'items' => [ 42 ]
-			] ) );
+		$mock = new MockHandler( [
+			new Response(
+				200,
+				[],
+				json_encode( [
+					'status' => [ 'error' => 'OK' ],
+					'items' => [ 42 ]
+				] )
+			)
+		] );
+		$handler = HandlerStack::create( $mock );
+		$client = new Client( [ 'handler' => $handler ] );
+		$wikidataQueryApi = new WikidataQueryApi( '', $client );
 
-		$wikidataQueryApi = new WikidataQueryApi( $clientMock );
 		$this->assertEquals(
 			[
 				'status' => [ 'error' => 'OK' ],
@@ -35,17 +42,18 @@ class WikidataQueryApiTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testDoQueryWithError() {
-		$clientMock = $this->getMock( 'WikidataQueryApi\Guzzle\WikidataQueryApiClient' );
-		$clientMock->expects( $this->any() )
-			->method( 'apiGet' )
-			->with( $this->equalTo( [
-				'q' => 'claim[42:42]'
-			] ) )
-			->will( $this->returnValue( [
-				'status' => [ 'error' => 'Error' ]
-			] ) );
-
-		$wikidataQueryApi = new WikidataQueryApi( $clientMock );
+		$mock = new MockHandler( [
+			new Response(
+				200,
+				[],
+				json_encode( [
+					'status' => [ 'error' => 'Error' ]
+				] )
+			)
+		] );
+		$handler = HandlerStack::create( $mock );
+		$client = new Client( [ 'handler' => $handler ] );
+		$wikidataQueryApi = new WikidataQueryApi( '', $client );
 
 		$this->setExpectedException( 'WikidataQueryApi\WikibaseQueryApiException' );
 		$wikidataQueryApi->doQuery( [
