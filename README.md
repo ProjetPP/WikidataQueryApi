@@ -25,7 +25,7 @@ Use one of the below methods:
 
     {
         "require": {
-            "ppp/wikidataquery-api"": "~1.0"
+            "ppp/wikidataquery-api": "~1.0"
         }
     }
 
