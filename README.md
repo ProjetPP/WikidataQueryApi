@@ -43,7 +43,7 @@ $api = new WikidataQueryApi( 'https://wdq.wmflabs.org/api' );
 
 // Build helper tools
 $wikidataQueryFactory = new WikidataQueryFactory( $api );
-$simpleQueryService = $wikidataQueryFactory->newSimpleQueryService() );
+$simpleQueryService = $wikidataQueryFactory->newSimpleQueryService();
 
 //Do a query that returns a list of ItemId
 //This query finds all the children (P40) of Charlemagne (Q3044)
